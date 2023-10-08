@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* colors
+purple: #461931
+pink: #e26275
+lightblue: #89acde
+lightpurple:#6f77a7
+carmin:#962645
+*/
+
+body{
+  background-color: #89acde;
+
+}
+
+*{
+  color: #461931;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 18px;
+}
+  
+input{
+  background: transparent;
+  color: black;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-bottom: 14px;
+  width: 100%;
+}
+
+.container-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.background-button{
+  background-color: #461931;
+  color: #89acde;
+
+}
+
+button, [type='submit']{
+  border-radius: 30px;
+  background-color: #461931;
+  height: 40px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+a{
+  margin-top: 40px;
+}
+
+h1{
+  font-family: fantasy;
+  font-size: 60px;
+
+}
+
+a:hover{
+  text-decoration: underline;
+}
