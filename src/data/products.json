@@ -1,0 +1,59 @@
+[
+    {
+      "id": 1,
+      "name": "Diamond Ring",
+      "description": "An elegant diamond ring with a classic design.",
+      "price": 1000.0,
+      "image" :"https://images.unsplash.com/photo-1591209627710-d2427565a41f?auto=format&fit=crop&q=80&w=2970&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 2,
+      "name": "Pearl Earrings",
+      "description": "18k white gold earrings, perfect for special occasions.",
+      "price": 500.0,
+      "image": "https://images.unsplash.com/photo-1588444650733-d0767b753fc8?auto=format&fit=crop&q=80&w=2998&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 3,
+      "name": "Diamond ring",
+      "description": "A stunning 24k gold ring with diamonds, ideal for a marriage proposal.",
+      "price": 1200.0,
+      "image": "https://images.unsplash.com/photo-1611955167811-4711904bb9f8?auto=format&fit=crop&q=80&w=2971&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 4,
+      "name": "Gold colar",
+      "description": "An elegant 14k yellow gold colar for use in different casions.",
+      "price": 600.0,
+      "image": "https://images.unsplash.com/photo-1531995811006-35cb42e1a022?auto=format&fit=crop&q=80&w=2970&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 5,
+      "name": "Rubi Ring",
+      "description": "Rubi ring with white gold 18k details with diamonds.",
+      "price": 800.0,
+      "image": "https://images.unsplash.com/photo-1603561596112-0a132b757442?auto=format&fit=crop&q=80&w=2970&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 6,
+      "name": "Diamond and gold ring ",
+      "description": "Diamond in in 14k rose gold with white gold 18k details with diamonds.",
+      "price": 1500.0,
+      "image": "https://images.unsplash.com/photo-1514927465065-bbdc86c7a76c?auto=format&fit=crop&q=80&w=2970&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 7,
+      "name": "Quartzo Ring",
+      "description": "Quartzo ring with white gold 18k details with diamonds.",
+      "price": 700.0,
+      "image": "https://images.unsplash.com/photo-1499899833954-5ecd9439d17f?auto=format&fit=crop&q=80&w=2970&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 8,
+      "name": "Wedding gold rings",
+      "description": "Incredible customizable 24k gold wedding rings .",
+      "price": 350.0,
+      "image": "https://images.unsplash.com/photo-1622398925373-3f91b1e275f5?auto=format&fit=crop&q=80&w=2974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    }
+  ]
+  
