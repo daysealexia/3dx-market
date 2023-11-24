@@ -1,12 +1,13 @@
-import { EcommerceCard } from '@/components/card'
-import { CarouselDefault } from '@/components/carousel'
-import { Inter } from 'next/font/google'
-import Products from '@/data/products.json'
+import React from 'react';
+
+import Products from '@/data/products.json';
 import MenuHeader from '@/components/header'
-import { FooterWithSitemap } from '@/components/footer'
+import { EcommerceCard } from '@/components/card';
+import { CarouselDefault } from '@/components/carousel';
+import { FooterWithSitemap } from '@/components/footer';
+import Link from 'next/link';
 
 
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
@@ -18,7 +19,14 @@ export default function Home() {
 
       <div className='containerCard'>
         {Products.map((product) => (
-          <EcommerceCard name={product.name}   description= {product.description}  price= {product.price}  image={product.image} />
+          <EcommerceCard 
+            key={product.id}
+            id={product.id}
+            name={product.name}
+            description= {product.description}
+            price= {product.price}
+            image={product.image} />
+          
         ))}
       </div>
       

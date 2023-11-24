@@ -1,21 +1,41 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Logo from '@/assets/logo.png';
 import User from '@/assets/user.png';
-import Bag from '@/assets/bag.png'
+import Bag from '@/assets/bag.png';
 import Image from 'next/image';
 import Link from 'next/link';
 
-
 interface HeaderProps {
-  user: null; // Use o tipo User ou o tipo correto para os dados do usuário
+  user: null; 
   isLoggedIn: boolean;
 }
 
 const MenuHeader: React.FC<HeaderProps> = ({ user, isLoggedIn }) => {
+  const [cartItemsCount, setCartItemsCount] = useState(0);
+
+  useEffect(() => {
+    const updateCartItemsCount = () => {
+      const storedCartItems = JSON.parse(localStorage.getItem('cartItems') || '[]');
+      setCartItemsCount(storedCartItems.length);
+    };
+
+    updateCartItemsCount();
+
+   
+    window.addEventListener('storage', updateCartItemsCount);
+
+
+    return () => {
+      window.removeEventListener('storage', updateCartItemsCount);
+    };
+  }, []);
+
   return (
     <header className='flex justify-around items-center'>
       <div className='h-34 w-36' >
-        <Image src={Logo} alt={'logo'} />
+        <Link href='/'>
+          <Image src={Logo} alt={'logo'} />
+        </Link>
       </div>
 
       <nav>
@@ -33,22 +53,17 @@ const MenuHeader: React.FC<HeaderProps> = ({ user, isLoggedIn }) => {
       </nav>
       <div className='flex' >
         <div className='h-6 w-6'>
-        <Link href='/login'>
-        <Image src={User} alt={'user'} />
-        </Link>
+          <Link href='/login'>
+            <Image src={User} alt={'user'} />
+          </Link>
         </div>
         <div className='h-6 w-6 ml-4'>
-        <Link href='/'>
-        <Image src={Bag} alt={'bag'}  />
-        </Link>
+          <Link href='/addToCart'className='relative'>
+            <Image src={Bag} alt={'bag'} />
+            {cartItemsCount > 0 && <span className='bg-red-500 rounded-full text-white text-xs px-2 py-1 absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2'>{cartItemsCount}</span>}
+          </Link>
         </div>
-        
-     
-        
-        
-    
-      </div>
-      
+      </div>     
     </header>
   );
 };
