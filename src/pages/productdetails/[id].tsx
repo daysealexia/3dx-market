@@ -1,4 +1,3 @@
-// pages/product/[id].tsx
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import Products from '@/data/products.json';
@@ -20,27 +19,26 @@ const ProductPage = () => {
   const [addedToCart, setAddedToCart] = useState(false);
 
   useEffect(() => {
-    // Encontrando o produto correspondente com o ID da URL
+    
     const foundProduct = Products.find((p) => p.id === parseInt(id as string, 10));
 
-    // Atualizando o estado com o produto encontrado
+  
     if (foundProduct) {
       setProduct(foundProduct);
     }
   }, [id]);
 
   const addToCart = () => {
-    // Recuperando os itens do localStorage
+    
     const cartItems = JSON.parse(localStorage.getItem('cartItems') || '[]');
 
-    // Adicionando o produto ao carrinho
     const updatedCart = [...cartItems, product];
     localStorage.setItem('cartItems', JSON.stringify(updatedCart));
     setAddedToCart(true);
   };
 
   if (!product) {
-    return <div>Loading...</div>; // Pode exibir um loader enquanto carrega o produto
+    return <div>Loading...</div>; 
   }
 
   return (

@@ -13,20 +13,18 @@ type Product = {
 const CartPage = () => {
   const [cartItems, setCartItems] = useState<Product[]>([]);
 
-  // Carregar os itens do carrinho do localStorage ao iniciar a página
+
   useEffect(() => {
     const storedCartItems = JSON.parse(localStorage.getItem('cartItems') || '[]');
     setCartItems(storedCartItems);
   }, []);
 
-  // Função para remover um item do carrinho
   const removeFromCart = (productId: number) => {
     const updatedCart = cartItems.filter(item => item.id !== productId);
     setCartItems(updatedCart);
-    localStorage.setItem('cartItems', JSON.stringify(updatedCart)); // Atualiza o localStorage após remover o item
+    localStorage.setItem('cartItems', JSON.stringify(updatedCart)); 
   };
 
-  // Função para calcular o total do carrinho
   const calculateTotal = () => {
     return cartItems.reduce((total, item) => total + item.price, 0);
   };

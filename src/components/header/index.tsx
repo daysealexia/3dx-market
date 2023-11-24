@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 interface HeaderProps {
-  user: null; // Use o tipo User ou o tipo correto para os dados do usuário
+  user: null; 
   isLoggedIn: boolean;
 }
 
@@ -21,10 +21,10 @@ const MenuHeader: React.FC<HeaderProps> = ({ user, isLoggedIn }) => {
 
     updateCartItemsCount();
 
-    // Adiciona um listener de evento para quando o localStorage mudar
+   
     window.addEventListener('storage', updateCartItemsCount);
 
-    // Remove o listener de evento quando o componente for desmontado
+
     return () => {
       window.removeEventListener('storage', updateCartItemsCount);
     };
